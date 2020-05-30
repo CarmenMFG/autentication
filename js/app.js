@@ -1,0 +1,1 @@
+const app = new LoginController(new LoginService(), new LoginView());
