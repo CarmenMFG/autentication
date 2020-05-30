@@ -10,7 +10,7 @@ body {
 #root{
     display:none;
 }
-form{
+.login form{
     width:25%;
     padding:30px;
     border:1px solid #1b6d2d;
@@ -20,7 +20,7 @@ form{
 }
 /** Modal**/
 .modal .modal-dialog {
-    max-width: 400px;
+   max-width: 400px;
   }
   .modal .modal-header, .modal .modal-body, .modal .modal-footer {
     padding: 20px 30px;
@@ -32,7 +32,7 @@ form{
     border-radius: 0 0 3px 3px;
   }
   .modal .modal-header{
-    background: #526985;
+    background: #1b6d2d;
     color: #fff;
   }
   .modal .modal-title {
@@ -48,9 +48,7 @@ form{
     box-shadow: none;
    border-color: #dddddd;
   }
-  .modal textarea.form-control {
-    resize: vertical;
-  }
+  
   .modal .btn {
     border-radius: 2px;
     min-width: 100px;
