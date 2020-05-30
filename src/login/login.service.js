@@ -7,6 +7,9 @@ class LoginService {
        if ((dataUser.user!==this.user) || (dataUser.password!==this.password)){
         throw (new Error('The username or password are wrong'));
        } 
-       localStorage.setItem("credentialsRAM", JSON.stringify(dataUser));
+       let items=JSON.parse(localStorage.getItem("credentials")) || [];
+       let credentials={ram:dataUser};
+       items = [...items,credentials];
+       localStorage.setItem("credentials", JSON.stringify(items));
     }
 }

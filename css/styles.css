@@ -1,6 +1,86 @@
+body {
+    color: #1b6d2d;
+    background: #f5f5f5;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 13px;
+  }
 .menu{
     display:none;
 }
 #root{
     display:none;
 }
+form{
+    width:25%;
+    padding:30px;
+    border:1px solid #1b6d2d;
+    margin:10% auto;
+    text-align:center;
+    box-shadow:0 .15rem 1.75rem 0 rgba(58, 59, 69, .15);
+}
+/** Modal**/
+.modal .modal-dialog {
+    max-width: 400px;
+  }
+  .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+    padding: 20px 30px;
+  }
+  .modal .modal-content {
+    border-radius: 3px;
+  }
+  .modal .modal-footer {
+    border-radius: 0 0 3px 3px;
+  }
+  .modal .modal-header{
+    background: #526985;
+    color: #fff;
+  }
+  .modal .modal-title {
+    display: inline-block;
+   
+  }
+  .modal .modal-header .close{
+     color:white;
+  
+  }
+  .modal .form-control {
+    border-radius: 2px;
+    box-shadow: none;
+   border-color: #dddddd;
+  }
+  .modal textarea.form-control {
+    resize: vertical;
+  }
+  .modal .btn {
+    border-radius: 2px;
+    min-width: 100px;
+  }	
+  .modal form label {
+    font-weight: normal;
+  }	
+  .hide{
+    display:none;
+  }
+  .show{
+    display:inline;
+  }
+  label{
+      color:#1b6d2d;
+      font-size: 1.2em;
+      font-weight:bold;
+  }
+  .links{
+      color:#1b6d2d;
+      letter-spacing:1.5px;
+      font-size:1.5em;
+      font-weight: bold;
+  }
+  .links:hover{
+      color:#04ef37;
+      text-decoration:none;
+  }
+  h1{
+    margin-top: 10%;
+    text-align:center;
+    font-style: italic;
+  }

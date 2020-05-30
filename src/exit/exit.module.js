@@ -1,0 +1,1 @@
+const appExit = new ExitController(new ExitService(), new ExitView());

@@ -22,6 +22,7 @@ class LoginView{
            this.menu.style.display="block";
            this.login.style.display="none";  
            this.root.style.display="block"; 
+           this._resetInputs();
          }catch(error){
             $('#modalMsg').empty();
             $('#modalMsg').append(error);
