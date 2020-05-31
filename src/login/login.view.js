@@ -7,7 +7,6 @@ class LoginView{
       this.user=document.getElementById("txtUser");
       this.password=document.getElementById("txtPassword");
       this.accept=document.getElementById("accept");
-
   }
   _resetInputs(){
     this.user.value="";
@@ -19,10 +18,7 @@ class LoginView{
          try{
            const dataUser={user:this.user.value,password:this.password.value};
            handler(dataUser);  
-           this.menu.style.display="block";
-           this.login.style.display="none";  
-           this.root.style.display="block"; 
-           this._resetInputs();
+           this.showMenu();
          }catch(error){
             $('#modalMsg').empty();
             $('#modalMsg').append(error);
@@ -30,6 +26,18 @@ class LoginView{
             this._resetInputs();
          }                  
       })
+  }
+ showMenu(){
+    this.menu.style.display="block";
+    this.login.style.display="none";  
+    this.root.style.display="block"; 
+    this._resetInputs();
+  }
+  showLogin(){
+    this.menu.style.display="none";
+    this.login.style.display="block";  
+    this.root.style.display="none"; 
+    this._resetInputs();
   }
  
 }

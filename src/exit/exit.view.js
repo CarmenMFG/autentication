@@ -8,5 +8,6 @@ class ExitView{
       this.login.style.display="block";
       this.menu.style.display="none";
       this.root.style.display="none";
+      window.location="http://localhost:5000/src/#/";
   }
 }      

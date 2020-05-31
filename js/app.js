@@ -1,4 +1,11 @@
-const app = new LoginController(new LoginService(), new LoginView());
+/*(async () => {
+  try {
+        const app = new LoginController(new LoginService(), new LoginView());
+  } catch (error) {
+        console.error(error);
+  }
+  })();   */   
+  const app = new LoginController(new LoginService(), new LoginView());
 const scripts =document.getElementById('scriptsClass');
 let pageVisited={dashboard:false,users:false,profile:false,products:false,exit:false};
 
@@ -88,6 +95,7 @@ const DashboardComponent = {
             if (!pageVisited.exit){
               pageVisited.exit=true;
               insertScripts("exit");
+
              }  
              insertModuleScript("exit");
             
@@ -126,16 +134,19 @@ const DashboardComponent = {
       let view = document.createElement('script');
       view.setAttribute("type","text/javascript");
       view.setAttribute("src", `${name}/${name}.view.js`);
+      view.async = false;
       scripts.append(view);
 
       let service= document.createElement('script');
       service.setAttribute("type","text/javascript");
       service.setAttribute("src",`${name}/${name}.service.js`);
+      service.async = false;
       scripts.append(service);
 
       let controller=document.createElement('script');
       controller.setAttribute("type","text/javascript");
       controller.setAttribute("src",`${name}/${name}.controller.js`);
+      controller.async = false;
       scripts.append(controller);
  
   }
@@ -143,6 +154,7 @@ const DashboardComponent = {
       let module=document.createElement('script');
       module.setAttribute("type","text/javascript");
       module.setAttribute("src",`${name}/${name}.module.js`);
+      module.async = false;
       scripts.append(module);
   }
 

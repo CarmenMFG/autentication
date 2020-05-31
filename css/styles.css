@@ -82,3 +82,6 @@ body {
     text-align:center;
     font-style: italic;
   }
+  .btn{
+    width:100% !important;
+  }

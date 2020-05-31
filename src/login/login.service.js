@@ -4,12 +4,22 @@ class LoginService {
         this.password="1234";
     }
     checkCredentials(dataUser){
-       if ((dataUser.user!==this.user) || (dataUser.password!==this.password)){
+      if ((dataUser.user!==this.user) || (dataUser.password!==this.password)){
         throw (new Error('The username or password are wrong'));
        } 
-       let items=JSON.parse(localStorage.getItem("credentials")) || [];
-       let credentials={ram:dataUser};
+       this.setToken("ram",dataUser);
+     /*  let items=JSON.parse(localStorage.getItem("credentials")) || [];
+      let credentials={ram:dataUser};
        items = [...items,credentials];
-       localStorage.setItem("credentials", JSON.stringify(items));
+       localStorage.setItem("credentials", JSON.stringify(items));*/
+    }
+    setToken(type,token){
+        let credentials = JSON.parse(localStorage.getItem('Credentials')) || {};
+        credentials[type] = token;
+        localStorage.setItem('Credentials', JSON.stringify(credentials));
+        
+    }
+    getCredentials(){
+        return JSON.parse(localStorage.getItem('Credentials')) || {};
     }
 }
